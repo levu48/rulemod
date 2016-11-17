@@ -1,0 +1,42 @@
+{
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e57",
+      "segment": "5722eead1998821f24d20470",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "OSC14703_OSCARSPECIALNIGHTENGCA",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e58",
+          "_id": "5722f3df4d70971425cc6e60"
+        }],
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e61"
+          }
+        ]
+      }
+}

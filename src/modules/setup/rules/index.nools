@@ -1,0 +1,14 @@
+rule setupViolationCounts {
+    agenda-group: 'setup';
+    when {
+        f: AssertedAdArea {segmentId: $segmentId, id: $adAreaId};
+        not (f2: Violation f2.segmentId === f.segmentId && f2.adAreaId === f.id);
+    } then {
+        logger.info({
+            short_message: 'Running rule setupViolationCounts',
+            _operation:'group.setup'
+        });
+        var violation = new Violation({segmentId: $segmentId, adAreaId: $adAreaId});
+        assert(violation);
+    }
+}

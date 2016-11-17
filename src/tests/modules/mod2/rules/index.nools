@@ -1,0 +1,100 @@
+// =====================================
+// CLASSES
+// =====================================
+
+define ScheduledItem {
+    type: '',
+    id: '',
+    length: 0,
+    advertisingCategory: {
+        value: ''
+    },
+    brand: {
+        value: ''
+    },
+    slotId: '',
+    areaId: 0,
+    placement: {
+        programming: {
+            position: 'neutral'
+        },
+        advertising: {
+            position: 'neutral'
+        }
+    },
+    relatedScheduledItem: '',
+    segment: '',
+    productSOV: '',
+    constructor: function(options) {
+        this.type = 'ScheduledItem';
+        this.segment = options.segment;
+        this.id = options.id;
+        this.length = options.length;
+        this.advertisingCategory = options.advertisingCategory,
+        this.brand = options.brand,
+        this.relatedScheduledItem = options.relatedScheduledItem;
+        this.productSOV = options.productSOV;
+        if (options.placement) {
+            this.placement = options.placement;
+            if (!this.placement.programming) {
+                this.placement.programming = {
+                position: 'neutral'
+                };
+            }
+            if (!this.placement.advertising) {
+                this.placement.advertising = {
+                position: 'neutral'
+                };
+            }
+        }
+    }
+}
+
+define Segment {
+    type: '',
+    id: '',
+    length: 0,
+    constructor: function(options) {
+        this.type = 'Segment';
+        this.id = options.id;
+        this.length = options.length;
+    }
+}
+
+define AssertedAdArea {
+    type: '',
+    segmentId: '',
+    id: 1,
+    category: '',
+    slots: [],
+    typeOfContent: '',
+    constructor: function(options) {
+        this.type = 'AssertedAdArea';
+        this.segmentId = options.segmentId;
+        this.id = options.id;
+        this.category = options.category;
+        this.slots = options.slots;
+        this.typeOfContent = options.typeOfContent;
+    }
+}
+
+define AdArea {
+    type: '',
+    segmentId: '',
+    id: 1,
+    scheduledItemId: '',
+    category: '',
+    specifiedContent: '',
+    typeOfContent: '',
+    slots: [],
+    constructor: function(options) {
+        this.type = 'AdArea';
+        this.segmentId = options.segmentId;
+        this.id = options.id;
+        this.scheduledItemId = options.scheduledItemId;
+        this.category = options.category;
+        this.specifiedContent = options.specifiedContent;
+        this.slots = options.slots;
+        this.typeOfContent = options.typeOfContent;
+    }
+}

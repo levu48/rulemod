@@ -1,0 +1,23 @@
+rule findResult {
+    agenda-group: 'find-result';
+    when {
+        m: Message m.message === 'findResult';
+        s: ScheduledItem s.id === m.scheduledItemId;
+        a: AssertedAdArea;
+        v: Violation v.adAreaId === a.id && v.segmentId === a.segmentId;
+        not (r: Result r.scheduledItemId === m.scheduledItemId && r.segmentId === m.segmentId);
+    } then {
+        logger.info({
+            short_message: 'Running rule findResult',
+            _misc: {count: v.count, area: a.id},
+            _operation:'group: find-result'
+        });
+        assert(new Result({
+            scheduledItemId: m.scheduledItemId,
+            segmentId: m.segmentId,
+            adAreaId: a.id,
+            violation: v.count > 0 ? 'true' : 'false',
+            count: v.count
+        }));
+    }
+}

@@ -1,0 +1,197 @@
+// *************************************
+// MODULE CORE
+// *************************************
+
+// ======================================================
+// COMMON CLASSES FOR ALL SCHEDULING-RELATED APPLICATIONS
+// ======================================================
+
+define ScheduledItem {
+    type: '',
+    id: '',
+    length: 0,
+    advertisingCategory: { value: '' },
+    brand: { value: '' },
+    slotId: '',
+    areaId: 0,
+    placement: {
+        programming: { position: 'neutral' },
+        advertising: { position: 'neutral' }
+    },
+    relatedScheduledItem: '',
+    segment: '',
+    productSOV: '',
+    constructor: function(options) {
+        this.type = 'ScheduledItem';
+        this.segment = options.segment;
+        this.id = options._id;
+        this.length = options.productType.length;
+        this.advertisingCategory = options.advertisingCategory,
+        this.brand = options.brand,
+        this.relatedScheduledItem = options.relatedScheduledItem;
+        this.productSOV = options.productSOV;
+        if (options.placement) {
+            this.placement = options.placement;
+            if (!this.placement.programming) {
+                this.placement.programming = {
+                position: 'neutral'
+                };
+            }
+            if (!this.placement.advertising) {
+                this.placement.advertising = {
+                position: 'neutral'
+                };
+            }
+        }
+    }
+}
+
+define Segment {
+    type: '',
+    id: '',
+    length: 0,
+    constructor: function(options) {
+        this.type = 'Segment';
+        this.id = options._id;
+        this.length = options.length;
+    }
+}
+
+define AssertedAdArea {
+    type: '',
+    segmentId: '',
+    id: '',
+    areaNumber: 0,
+    category: '',
+    slots: [],
+    typeOfContent: '',
+    constructor: function(options) {
+        this.type = 'AssertedAdArea';
+        this.segmentId = options.segmentId;
+        this.id = options.id;
+        this.category = options.category;
+        this.slots = options.slots;
+        this.typeOfContent = options.typeOfContent;
+    }
+}
+
+define AdArea {
+    type: '',
+    segmentId: '',
+    id: '',
+    areaNumber: 0,
+    scheduledItemId: '',
+    category: '',
+    specifiedContent: '',
+    typeOfContent: '',
+    slots: [],
+    constructor: function(options) {
+        this.type = 'AdArea';
+        this.segmentId = options.segmentId;
+        this.id = options._id;
+        this.areaNumber = options.areaNumber;
+        this.scheduledItemId = options.scheduledItemId;
+        this.category = options.category;
+        this.specifiedContent = options.specifiedContent;
+        this.slots = options.slots;
+        this.typeOfContent = options.typeOfContent;
+    }
+}
+
+// ======================================================
+// HELPER CLASSES
+// ======================================================
+
+define Message {
+    type: '',
+    message: '',
+    segmentId: '',
+    adAreaId: 0,
+    scheduledItemId: '',
+    constructor: function(options) {
+        this.type = 'Message';
+        this.message = options.message;
+        this.segmentId = options.segmentId;
+        this.adAreaId = options.adAreaId;
+        this.scheduledItemId = options.scheduledItemId;
+    }
+}
+
+
+define Violation {
+    type: '',
+    segmentId: '',
+    adAreaId: 0,
+    count: 0,
+    constructor: function(options) {
+        this.type = 'Violation';
+        this.segmentId = options.segmentId;
+        this.adAreaId = options.adAreaId;
+        this.count = 0;
+    }
+}
+
+define Violations {
+    type: '',
+    segmentId: '',
+    scheduledItemId: '',
+    violations: [],
+    constructor: function(options) {
+        this.type = 'Violations';
+        this.segmentId = options.segmentId;
+        this.scheduledItemId = options.scheduledItemId;
+        this.violations = options.violations;
+    }
+}
+
+
+define SlotSelection {
+    type: '',
+    scheduledItemId: '',
+    segmentId: '',
+    adAreaId: 0,
+    constructor: function(options) {
+        this.type = 'SlotSelection';
+        this.scheduledItemId = options.scheduledItemId;
+        this.segmentId = options.segmentId;
+        this.adAreaId = options.adAreaId;
+    }
+}
+
+define Result {
+    type: '',
+    scheduledItemId: '',
+    segmentId: '',
+    adAreaId: 0,
+    violation: '',
+    count: 0,
+    constructor: function(options) {
+        this.type = 'Result';
+        this.scheduledItemId = options.scheduledItemId;
+        this.segmentId = options.segmentId;
+        this.adAreaId = options.adAreaId;
+        this.violation = options.violation;
+        this.count = options.count;
+    }
+}
+
+
+// =====================================
+// TESTING RULES
+// =====================================
+
+rule testMessage {
+    when {
+        m: Message m.message === 'Test';
+    } then {
+        console.log("rule testMessage executed: TEST CORE MESSAGE");
+        logger.trace({
+            short_message: "LOGGER MESSAGE FROM CORE MODULE",
+            _operation: 'core.nools.testMessage'
+        });
+    }
+}
+
+
+
+

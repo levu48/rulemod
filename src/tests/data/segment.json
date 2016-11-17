@@ -1,0 +1,191 @@
+{
+      "_id": "5722eead1998821f24d20470",
+      "site": {
+        "program": {
+          "__v": 0,
+          "network": "Wayne",
+          "description": "IOTV2",
+          "value": "W",
+          "key": 4,
+          "id": "56df37e3772488de4c944f91"
+        },
+        "actions": [
+          
+        ],
+        "id": "56e5964c36b63bac19730545"
+      },
+      "date": "2016-09-15T05:00:00.000Z",
+      "__v": 0,
+      "areas": [
+        {
+          "typeOfContent": "Intro",
+          "specifiedContent": "Branded Intro",
+          "areaNumber": 1,
+          "_id": "5722eead1998821f24d20484",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 2,
+          "_id": "5722eead1998821f24d20483",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ESPN",
+          "areaNumber": 3,
+          "_id": "5722eead1998821f24d20482",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 4,
+          "_id": "5722eead1998821f24d20481",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 5,
+          "_id": "5722eead1998821f24d20480",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 6,
+          "_id": "5722eead1998821f24d2047f",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "BLOOMBERG",
+          "areaNumber": 7,
+          "_id": "5722eead1998821f24d2047e",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 8,
+          "_id": "5722eead1998821f24d2047d",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 9,
+          "_id": "5722eead1998821f24d2047c",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 10,
+          "_id": "5722eead1998821f24d2047b",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "SHOWBIZ",
+          "areaNumber": 11,
+          "_id": "5722eead1998821f24d2047a",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 12,
+          "_id": "5722eead1998821f24d20479",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 13,
+          "_id": "5722eead1998821f24d20478",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 14,
+          "_id": "5722eead1998821f24d20477",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "HLN",
+          "areaNumber": 15,
+          "_id": "5722eead1998821f24d20476",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 16,
+          "_id": "5722eead1998821f24d20475",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 17,
+          "_id": "5722eead1998821f24d20474",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 18,
+          "_id": "5722eead1998821f24d20473",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ACCUWEATHER",
+          "areaNumber": 19,
+          "_id": "5722eead1998821f24d20472",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 20,
+          "_id": "5722eead1998821f24d20471",
+          "slots": [
+            
+          ]
+        }
+      ]
+}

@@ -1,0 +1,855 @@
+{
+  "scheduledItems": [
+    {
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e57",
+      "segment": "5722eead1998821f24d20470",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "OSC14703_OSCARSPECIALNIGHTENGCA",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e58",
+          "_id": "5722f3df4d70971425cc6e60"
+        }
+      ],
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e61"
+          }
+        ]
+      }
+    },
+    {
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e59",
+      "segment": "5722eead1998821f24d20470",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "testIntro",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "type": "intro",
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e58",
+          "_id": "5722f3df4d70971425cc6e62"
+        }
+      ],
+      "placement": {
+        "advertisement": {
+          "position": "before"
+        }
+      },
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e63"
+          }
+        ]
+      }
+    },
+    {
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e5a",
+      "segment": "5722eeaf1998821f24d20485",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "OSC14703_OSCARSPECIALNIGHTENGCA",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e5b",
+          "_id": "5722f3df4d70971425cc6e64"
+        }
+      ],
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e65"
+          }
+        ]
+      }
+    },
+    {
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e5c",
+      "segment": "5722eeaf1998821f24d20485",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "testIntro",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "type": "intro",
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e5b",
+          "_id": "5722f3df4d70971425cc6e66"
+        }
+      ],
+      "placement": {
+        "advertisement": {
+          "position": "before"
+        }
+      },
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e67"
+          }
+        ]
+      }
+    },
+    {
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e5d",
+      "segment": "5722eeb01998821f24d2049a",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "OSC14703_OSCARSPECIALNIGHTENGCA",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e5e",
+          "_id": "5722f3df4d70971425cc6e68"
+        }
+      ],
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e69"
+          }
+        ]
+      }
+    },
+    {
+      "__v": 0,
+      "_id": "5722f3df4d70971425cc6e5f",
+      "segment": "5722eeb01998821f24d2049a",
+      "advertisingCategory": {
+        "value": "HEALTHCARE",
+        "description": "Healthcare"
+      },
+      "asset": "Asset41",
+      "assetName": "testIntro",
+      "brand": {
+        "description": "Express Petroleum",
+        "value": "EXPRESS_PETROLEUM"
+      },
+      "campaign": "Example SImple",
+      "client": "Acceptance Insurance",
+      "insertionOrderNumber": "18279",
+      "mediaRotation": 100,
+      "productType": {
+        "length": 30,
+        "primary": true,
+        "value": "30_SECOND_TIMED_AD",
+        "description": "30 Second Timed Ad"
+      },
+      "productSOV": 100,
+      "rotationPercentage": 100,
+      "type": "intro",
+      "cluster": [
+        {
+          "type": "intro-outro",
+          "id": "5722f3df4d70971425cc6e5e",
+          "_id": "5722f3df4d70971425cc6e6a"
+        }
+      ],
+      "placement": {
+        "advertisement": {
+          "position": "before"
+        }
+      },
+      "mediaFlight": {
+        "daypart": [
+          {
+            "startTime": "00:00:00",
+            "stopTime": "23:59:59",
+            "_id": "5722f3df4d70971425cc6e6b"
+          }
+        ]
+      }
+    }
+  ],
+  "segments": [
+    {
+      "_id": "5722eead1998821f24d20470",
+      "site": {
+        "program": {
+          "__v": 0,
+          "network": "Wayne",
+          "description": "IOTV2",
+          "value": "W",
+          "key": 4,
+          "id": "56df37e3772488de4c944f91"
+        },
+        "actions": [
+          
+        ],
+        "id": "56e5964c36b63bac19730545"
+      },
+      "date": "2016-09-15T05:00:00.000Z",
+      "__v": 0,
+      "areas": [
+        {
+          "typeOfContent": "Intro",
+          "specifiedContent": "Branded Intro",
+          "areaNumber": 1,
+          "_id": "5722eead1998821f24d20484",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 2,
+          "_id": "5722eead1998821f24d20483",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ESPN",
+          "areaNumber": 3,
+          "_id": "5722eead1998821f24d20482",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 4,
+          "_id": "5722eead1998821f24d20481",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 5,
+          "_id": "5722eead1998821f24d20480",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 6,
+          "_id": "5722eead1998821f24d2047f",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "BLOOMBERG",
+          "areaNumber": 7,
+          "_id": "5722eead1998821f24d2047e",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 8,
+          "_id": "5722eead1998821f24d2047d",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 9,
+          "_id": "5722eead1998821f24d2047c",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 10,
+          "_id": "5722eead1998821f24d2047b",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "SHOWBIZ",
+          "areaNumber": 11,
+          "_id": "5722eead1998821f24d2047a",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 12,
+          "_id": "5722eead1998821f24d20479",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 13,
+          "_id": "5722eead1998821f24d20478",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 14,
+          "_id": "5722eead1998821f24d20477",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "HLN",
+          "areaNumber": 15,
+          "_id": "5722eead1998821f24d20476",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 16,
+          "_id": "5722eead1998821f24d20475",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 17,
+          "_id": "5722eead1998821f24d20474",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 18,
+          "_id": "5722eead1998821f24d20473",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ACCUWEATHER",
+          "areaNumber": 19,
+          "_id": "5722eead1998821f24d20472",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 20,
+          "_id": "5722eead1998821f24d20471",
+          "slots": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5722eeaf1998821f24d20485",
+      "site": {
+        "program": {
+          "__v": 0,
+          "network": "Wayne",
+          "description": "IOTV2",
+          "value": "W",
+          "key": 4,
+          "id": "56df37e3772488de4c944f91"
+        },
+        "actions": [
+          
+        ],
+        "id": "56e5964c36b63bac19730545"
+      },
+      "date": "2016-09-16T05:00:00.000Z",
+      "__v": 0,
+      "areas": [
+        {
+          "typeOfContent": "Intro",
+          "specifiedContent": "Branded Intro",
+          "areaNumber": 1,
+          "_id": "5722eeaf1998821f24d20499",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 2,
+          "_id": "5722eeaf1998821f24d20498",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ESPN",
+          "areaNumber": 3,
+          "_id": "5722eeaf1998821f24d20497",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 4,
+          "_id": "5722eeaf1998821f24d20496",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 5,
+          "_id": "5722eeaf1998821f24d20495",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 6,
+          "_id": "5722eeaf1998821f24d20494",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "BLOOMBERG",
+          "areaNumber": 7,
+          "_id": "5722eeaf1998821f24d20493",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 8,
+          "_id": "5722eeaf1998821f24d20492",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 9,
+          "_id": "5722eeaf1998821f24d20491",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 10,
+          "_id": "5722eeaf1998821f24d20490",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "SHOWBIZ",
+          "areaNumber": 11,
+          "_id": "5722eeaf1998821f24d2048f",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 12,
+          "_id": "5722eeaf1998821f24d2048e",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 13,
+          "_id": "5722eeaf1998821f24d2048d",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 14,
+          "_id": "5722eeaf1998821f24d2048c",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "HLN",
+          "areaNumber": 15,
+          "_id": "5722eeaf1998821f24d2048b",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 16,
+          "_id": "5722eeaf1998821f24d2048a",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 17,
+          "_id": "5722eeaf1998821f24d20489",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 18,
+          "_id": "5722eeaf1998821f24d20488",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ACCUWEATHER",
+          "areaNumber": 19,
+          "_id": "5722eeaf1998821f24d20487",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 20,
+          "_id": "5722eeaf1998821f24d20486",
+          "slots": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5722eeb01998821f24d2049a",
+      "site": {
+        "program": {
+          "__v": 0,
+          "network": "Wayne",
+          "description": "IOTV2",
+          "value": "W",
+          "key": 4,
+          "id": "56df37e3772488de4c944f91"
+        },
+        "actions": [
+          
+        ],
+        "id": "56e5964c36b63bac19730545"
+      },
+      "date": "2016-09-17T05:00:00.000Z",
+      "__v": 0,
+      "areas": [
+        {
+          "typeOfContent": "Intro",
+          "specifiedContent": "Branded Intro",
+          "areaNumber": 1,
+          "_id": "5722eeb01998821f24d204ae",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 2,
+          "_id": "5722eeb01998821f24d204ad",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ESPN",
+          "areaNumber": 3,
+          "_id": "5722eeb01998821f24d204ac",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 4,
+          "_id": "5722eeb01998821f24d204ab",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 5,
+          "_id": "5722eeb01998821f24d204aa",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 6,
+          "_id": "5722eeb01998821f24d204a9",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "BLOOMBERG",
+          "areaNumber": 7,
+          "_id": "5722eeb01998821f24d204a8",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 8,
+          "_id": "5722eeb01998821f24d204a7",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 9,
+          "_id": "5722eeb01998821f24d204a6",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 10,
+          "_id": "5722eeb01998821f24d204a5",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "SHOWBIZ",
+          "areaNumber": 11,
+          "_id": "5722eeb01998821f24d204a4",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 12,
+          "_id": "5722eeb01998821f24d204a3",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 13,
+          "_id": "5722eeb01998821f24d204a2",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 14,
+          "_id": "5722eeb01998821f24d204a1",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "HLN",
+          "areaNumber": 15,
+          "_id": "5722eeb01998821f24d204a0",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 16,
+          "_id": "5722eeb01998821f24d2049f",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Bumper",
+          "specifiedContent": "Bumper",
+          "areaNumber": 17,
+          "_id": "5722eeb01998821f24d2049e",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 18,
+          "_id": "5722eeb01998821f24d2049d",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Programming",
+          "specifiedContent": "ACCUWEATHER",
+          "areaNumber": 19,
+          "_id": "5722eeb01998821f24d2049c",
+          "slots": [
+            
+          ]
+        },
+        {
+          "typeOfContent": "Ad",
+          "areaNumber": 20,
+          "_id": "5722eeb01998821f24d2049b",
+          "slots": [
+            
+          ]
+        }
+      ]
+    }
+  ]
+}

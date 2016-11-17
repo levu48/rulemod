@@ -1,0 +1,53 @@
+rule initViolations {
+    agenda-group: 'slot-selection';
+    when {
+        m: Message m.message === 'slotSelection';
+        f: ScheduledItem f.id === m.scheduledItemId;
+        f2: Segment f2.id === m.segmentId;
+        not (f3: Violations f3.scheduledItemId === m.scheduledItemId && f3.segmentId === m.segmentId);
+    } then {
+        assert(new Violations({scheduledItemId: m.scheduledItemId, segmentId: m.segmentId, violations: []}));
+    }
+}
+
+rule populateViolations {
+    agenda-group: 'slot-selection';
+    when {
+        m: Message m.message === 'slotSelection';
+        f: Violations f.scheduledItemId === m.scheduledItemId && f.segmentId === m.segmentId;
+        f2: Violation f2.segmentId === m.segmentId;
+    } then {
+        f.violations.push(f2);
+    }
+}
+
+
+rule slotSelection {
+    agenda-group: 'slot-selection';
+    salience: -1;
+    when {
+        m: Message m.message === 'slotSelection';
+        f: ScheduledItem f.id === m.scheduledItemId;
+        f2: Segment f2.id === m.segmentId;
+        f3: Violations f3.scheduledItemId === m.scheduledItemId && f3.segmentId === m.segmentId;
+    } then {
+        var minViolation = function(violations) {
+            var arr = violations.violations;
+            if (arr.length === 0) {
+                return;
+            }
+
+            var min = arr[0];
+            for (var i=0; i<arr.length; i++) {
+                if (min.count > arr[i].count) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }(f3);
+
+        if (minViolation) {
+            assert(new SlotSelection({scheduledItemId: m.scheduledItemId, segmentId: m.segmentId, adAreaId: minViolation.adAreaId}));
+        }
+    }
+}

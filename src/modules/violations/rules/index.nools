@@ -1,0 +1,161 @@
+rule categoryViolation {
+  agenda-group: 'violation';
+  when {
+    si: ScheduledItem !si.slotId && si.areaId > 0;
+    ass: AssertedAdArea ass.id === si.areaId;
+    ad: AdArea ad.typeOfContent === ass.typeOfContent && categoryConflictCheck(si, ass, ad);
+  } then {
+    logger.info({
+        short_message: 'Running rule categoryViolation',
+        misc: {adAreaId: ass.id},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: si.segment, adAreaId: ass.id, weight: 800}));
+  }
+}
+
+rule antipodalPlacementViolation {
+  agenda-group: 'violation';
+  when {
+    si: ScheduledItem si.placement.advertising.position === 'anti-podal' && !si.slotId && si.areaId > 0 && si.productSOV <= 200;
+    relatedSi: ScheduledItem si.relatedScheduledItem === relatedSi.id && relatedSi.slotId;
+    ass: AssertedAdArea ass.id - relatedSi.areaId !== 6 && ass.id === si.areaId;
+  } then {
+    logger.info({
+        short_message: 'Running rule antipodalPlacementViolation',
+        _misc: {ScheduledItem: si, RelatedScheduledItem: relatedSi, Ass: ass},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: si.segment, adAreaId: ass.id, weight: 500}));
+  }
+}
+
+rule antipodalPlacementViolationFuzzy {
+  agenda-group: 'violation';
+  when {
+    si: ScheduledItem si.placement.advertising.position === 'anti-podal' && !si.slotId && si.areaId > 0;
+    relatedSi: ScheduledItem si.relatedScheduledItem === relatedSi.id && relatedSi.slotId;
+    ass: AssertedAdArea (ass.id - relatedSi.areaId) notIn [4, 6, 8] && ass.id === si.areaId;
+  } then {
+    logger.info({
+        short_message: 'Running rule antipodalPlacementViolationFuzzy',
+        _misc: {ScheduledItem: si, RelatedScheduledItem: relatedSi, Ass: ass},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: si.segment, adAreaId: ass.id, weight: 50}));
+  }
+}
+
+rule parentAntipodalPlacementViolation {
+  agenda-group: 'violation';
+  when {
+    childSi: ScheduledItem childSi.placement.advertising.position === 'anti-podal';
+    parentSi: ScheduledItem childSi.relatedScheduledItem === parentSi.id && !parentSi.slotId && parentSi.areaId > 0 && parentSi.productSOV <= 200;
+    segment: Segment;
+    ass: AssertedAdArea ass.id === parentSi.areaId && ass.id > (segment.length - 8);
+  } then {
+    logger.info({
+        short_message: 'Running rule parentAntipodalPlacementViolation',
+        _misc: {ScheduledItem: parentSi, RelatedScheduledItem: childSi, Ass: ass},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: parentSi.segment, adAreaId: ass.id, weight: 500}));
+  }
+}
+
+rule beforeProgrammingPlacementViolation {
+    agenda-group: 'violation';
+    when {
+        si: ScheduledItem si.placement.programming.position === 'before' && !si.slotId && si.areaId > 0;
+        ass: AssertedAdArea;
+        aa2: AdArea aa2.id === (ass.id + 1) && si.placement.programming.type !== aa2.specifiedContent;
+    } then {
+        logger.info({
+            short_message: 'Running rule beforeProgrammingPlacementViolation',
+            _operation:'group: violation'
+        });
+        assert(new Message({message: 'violation', segmentId: si.segment, adAreaId: ass.id, weight: 1000}));
+    }
+}
+
+rule afterProgrammingPlacementViolation {
+    agenda-group: 'violation';
+    when {
+        si: ScheduledItem si.placement.programming.position === 'after' && !si.slotId && si.areaId > 0;
+        ass: AssertedAdArea;
+        aa2: AdArea ass.id === (aa2.id + 1) && si.placement.programming.type !== aa2.specifiedContent;
+    } then {
+        logger.info({
+            short_message: 'Running rule beforeProgrammingPlacementViolation',
+            _operation:'group: violation'
+        });
+        assert(new Message({message: 'violation', segmentId: si.segment, adAreaId: ass.id, weight: 1000}));
+    }
+}
+
+rule afterAdvertisementPlacementViolation {
+  //the biz logic requires that the 'after' and its primary are both in SAME ad area
+    agenda-group: 'violation';
+    when {
+        ass: AssertedAdArea;
+        si: ScheduledItem  si.placement.advertisement.position === 'after' && !si.slotId && si.areaId > 0 && !checkAfterAdvertismentPlacement(si, ass);
+    } then {
+      logger.info({
+          short_message: 'Running rule afterAdvertisementPlacementViolation',
+          _operation:'group: violation'
+      });
+        assert(new Message({message: 'violation', segmentId: si.segment, adAreaId: ass.id, weight: 500}));
+    }
+}
+
+rule firstItemInTwoHundoPlusSOVPlacementViolation {
+  agenda-group: 'violation';
+  when {
+    firstSi: ScheduledItem firstSi.productSOV > 200 && !firstSi.relatedScheduledItem && !firstSi.slotId && firstSi.areaId > 0;
+    segment: Segment;
+    ass: AssertedAdArea ass.id > segment.length/3 && ass.id === firstSi.areaId;
+  } then {
+    logger.info({
+        short_message: 'Running rule firstItemInTwoHundoPlusSOVPlacementViolation',
+        _misc: {ScheduledItem: firstSi, Ass: ass},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: firstSi.segment, adAreaId: ass.id, weight: 2000}));
+  }
+}
+
+rule secondItemInTwoHundoPlusSOVPlacementViolation {
+  agenda-group: 'violation';
+  when {
+    secondSi: ScheduledItem secondSi.productSOV > 200 && !secondSi.slotId && secondSi.areaId > 0;
+    firstSi: ScheduledItem secondSi.relatedScheduledItem === firstSi.id && firstSi.slotId;
+    thirdSi: ScheduledItem thirdSi.relatedScheduledItem === secondSi.relatedScheduledItem && !thirdSi.slotId && thirdSi.areaId === 0;
+    segment: Segment;
+    ass: AssertedAdArea ((ass.id <= segment.length/3 && ass.id >= segment.length*2/3) || (ass.id === (firstSi.areaId + 1))) && ass.id === secondSi.areaId;
+  } then {
+    logger.info({
+        short_message: 'Running rule secondItemInTwoHundoPlusSOVPlacementViolation',
+        _misc: {ScheduledItem: secondSi, Ass: ass},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: secondSi.segment, adAreaId: ass.id, weight: 2000}));
+  }
+}
+
+rule thirdItemInTwoHundoPlusSOVPlacementViolation {
+  agenda-group: 'violation';
+  when {
+    thirdSi: ScheduledItem thirdSi.productSOV > 200 && !thirdSi.slotId && thirdSi.areaId > 0;
+    firstSi: ScheduledItem thirdSi.relatedScheduledItem === firstSi.id && firstSi.slotId;
+    secondSi: ScheduledItem secondSi.relatedScheduledItem === thirdSi.relatedScheduledItem && secondSi.slotId;
+    segment: Segment;
+    ass: AssertedAdArea (ass.id < segment.length*2/3 || ass.id === (secondSi.areaId + 1)) && ass.id === thirdSi.areaId;
+  } then {
+    logger.info({
+        short_message: 'Running rule thirdItemInTwoHundoPlusSOVPlacementViolation',
+        _misc: {ScheduledItem: thirdSi, Ass: ass},
+        _operation:'group: violation'
+    });
+    assert(new Message({message: 'violation', segmentId: thirdSi.segment, adAreaId: ass.id, weight: 2000}));
+  }
+}

@@ -1,0 +1,16 @@
+rule countViolation {
+    agenda-group: 'count-violation';
+    when {
+        f: Message f.message === 'violation';
+        f2: AssertedAdArea f2.id == f.adAreaId && f2.segmentId === f.segmentId;
+        f3: Violation f3.segmentId === f.segmentId && f3.adAreaId === f.adAreaId;
+    } then {
+        logger.info({
+            short_message: 'Running rule countViolation',
+            _misc: [f,f2,f3],
+            _operation:'group: violation'
+        });
+      modify(f3, function() {this.count = this.count+f.weight;});
+        retract(f);
+    }
+}

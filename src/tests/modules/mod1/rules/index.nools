@@ -1,0 +1,39 @@
+// =====================================
+// CLASSES
+// =====================================
+
+define ClassA {
+    val1: '',
+    constructor: function(options) {
+        this.val1 = options.val1;
+    }
+}
+
+define ClassA {
+    val1: '',
+    val2: '',
+    constructor: function(options) {
+        this.val1 = options.val1;
+        this.val2 = options.val2;
+    }
+}
+
+
+rule Hello {
+    when {
+        f: ClassA f.val1==='hello1';
+    } then {
+        console.log("hello");
+    }
+}
+
+
+
+rule Hello {
+    when {
+        f: ClassA f.val1==='hello2';
+    } then {
+        console.log("hello");
+    }
+}
+
